@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.header-add {
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-input {
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid var(--grey-2);
+  padding: 0.5rem;
+}
+
+.header-input:focus-visible {
+  outline: none;
+}
+
+.header-button {
+  background-color: var(--blue);
+}

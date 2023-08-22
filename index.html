@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header-title">Lista de Tareas</h1>
+        <form class="header-add">
+          <input
+            class="header-input"
+            type="text"
+            placeholder="Agregar Tareas"
+            name="task"
+            id="input-task"
+            title="Agregar tareas"
+            required
+          />
+          <button class="button header-button" type="submit" id="btn-add">
+            ENVIAR
+          </button>
+        </form>
+      </header>
+      <main class="list-container">
+        <ul class="list-task"></ul>
+        <div class="empty">
+          <p>No tiene tareas pendientes.</p>
+        </div>
+      </main>
+      <footer class="footer">
+        <button class="button button-check" onclick="checkedAllTask()">
+          Check All
+        </button>
+        <button class="button button-delete" onclick="deleteAllTask()">
+          Delete Tasks
+        </button>
+      </footer>
+    </div>
+    <div class="edit-container">
+      <div class="edit">
+        <div class="edit-header">
+          <h2>Editar Tarea</h2>
+          <i class="fa-solid fa-xmark" onclick="closeModalTask()"></i>
+        </div>
+        <div class="edit-input">
+          <input type="text" value="maria" />
+        </div>
+        <div class="edit-btn">
+          <button class="button edit-btn__close" onclick="closeModalTask()">
+            Cerrar
+          </button>
+          <button class="button edit-btn__save" onclick="saveChangeTask()">
+            Guardar Cambios
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
